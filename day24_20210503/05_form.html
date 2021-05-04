@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- form 태그 -->
+    <!-- form 태그 :회원가입, 로그인, 글쓰기, 수정, 검색
+                    전송이 목적, 서버(백엔드)로-->
     <form>
         <!-- name속성값에 입력한 데이터가 담겨서 서버로 전달됨
             입력창에 날씨라고 입력했다면 'name1=날씨'형태로 백엔드로 전달됨 -->
@@ -22,7 +23,9 @@
         </select><br>
         이메일 :
         <input type="text" name="emailid">@
-        <!-- 만약 지메일을 선택한다면 백엔드로 전달될 때 domain=gmail.com -->
+        <!-- 만약 지메일을 선택한다면 백엔드로 전달될 때 domain=gmail.com 
+        value 속성값이 domain으로-->
+       
         <select name="domain">
             <option value="naver.com">네이버</option>
             <option value="hanmail.net">다음</option>
@@ -30,9 +33,10 @@
         </select><br>
         자기소개:<textarea name="intro" rows="5" cols="15"></textarea><br>
         비밀번호:<input type="password" name="password"><br>
+        <!-- radio 사용할 때는 name 값을 똑같이, value는 다르게 => 한번만 체크가능) -->
         성별:<input type="radio" name="gender" value="male">
             <label for="male">남</label>
-            <input type="radio" name="gender2" value="female">
+            <input type="radio" name="gender" value="female">
             <label for="female">여</label><br>
         <!-- UI(User Interface) : 디자인
             UX(User eXperience) : 사용성 -->
