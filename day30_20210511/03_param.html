@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function test1(this){
+        function test1(var1){
             console.log('test1함수');
+            console.log(var1);
+            // this : 태그 자체를 넘겨주는 역할
         }
     </script>
 </head>
 <body>
-    <!-- 함수호출 매개값 넘기기 -->
-    입력1 : <input type="text" id="id1" value="기본값" onkeyup="test1(this)"><br>
+    <!-- 함수호출시 매개값 넘기기 -->
+    입력1 : <input type="text" id="id1" value="기본값" onkeyup="test1(this.value)"><br>
     
 </body>
 </html>
